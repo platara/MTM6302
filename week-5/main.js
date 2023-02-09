@@ -74,9 +74,20 @@ console.log(myUser.email = 'nicola@gmail.com')
 /*** Loops ***/
 //Use 'for counting loop' to display, in the console, a list of all names; use the ACstudents array.
 
+for ( let index = 0; index < ACstudents.length; index++) {
+    console.log( ACstudents[index].name)
+}
+
 //Use a for...of to display the 'userName' and 'studentNumber' from 'ACstudents' array
+for(const item of ACstudents){
+    console.log( item.userName + item.studentNumber  )
+}
 
 //Use a for...in to display all the properties of any object
+for(const prop in ACstudents[0]){
+    console.log(prop )
+    console.log( ACstudents[0][prop])
+}
 
 //Use a for...of and a for...in to display all the properties of every student from the ACstudents array
 
