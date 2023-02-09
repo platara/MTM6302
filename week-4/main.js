@@ -152,11 +152,11 @@ const $addBlogBtn = document.getElementById("addBlogBtn")
 $addBlogBtn.addEventListener('click', function () {
     //Body of the anonymous function
     if(blogIndex < 4){
-    blogCategory = blogs[blogIndex].category
-    blogTitle = blogs[blogIndex].title
+        blogCategory = blogs[blogIndex].category
+        blogTitle = blogs[blogIndex].title
 
-    // call the function to insert the HTML blog code
-    addBlog(blogCategory, blogTitle)
+        // call the function to insert the HTML blog code
+        addBlog(blogCategory, blogTitle)
     
     //Conditional statement to print something different when there is no more blogs to show. Note: this only works with 4 blogs in the array, later we will use a more dynamic approach
     }else if(blogIndex == 4){
