@@ -84,11 +84,6 @@
       </header>
 
       <div id="list" class="nav-scroller py-1 mb-2">
-        <nav id="courseList" class="nav d-flex justify-content-between">
-          <!-- <a class="p-2 link-secondary item" href="#">All</a>
-          <a class="p-2 link-secondary item" href="#">Web Dev I</a>
-          <a class="p-2 link-secondary item" href="#">Web Dev II</a> -->
-        </nav>
       </div>
     </div>
 
@@ -104,7 +99,7 @@
             <div class="ac-card-image"></div>
             <div class="ac-card-info">
               <p>
-                 <strong id="name"></strong><br>
+                 <strong id="name">Empty</strong><br>
                  <span id="studentNumber"></span>
               </p>
               <p id="email"></p>
@@ -118,12 +113,17 @@
       <table class="table">
         <thead>
           <tr>
-          <th>Name</th>
-          <th>#</th>
-          <th>E-mail address</th>
+            <th>#</th>
+            <th>Name</th>
+            <th>UserName</th>
+            <th>E-mail address</th>
           </tr>
-          </thead>
-        <tbody id="student-table"></tbody>
+        </thead>
+        <tbody id="student-table">
+          <tr>
+            <td></td>
+          </tr>
+        </tbody>
       </table>
     </main>
 
