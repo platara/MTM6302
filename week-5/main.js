@@ -14,7 +14,7 @@ const courses = ['Math','algebra','WDII']
 
 /*** Arrays - Manipulation ***/
 //Add a new element to the end of the array 'courses'
-// Output: ['Math', 'algebra','WDII', 'WDIII']
+// Output: ['Design', 'algebra','WDII', 'WDIII']
 courses.push('WDIII')
 
 //Remove the last element of the array and save it in a variable.
@@ -24,7 +24,7 @@ course = courses.shift()
 //Add a new element to the beginin of the array
 courses.unshift('OOP')
 //Removes the first item, and Inserts a new one using the same function. 
-courses.splice(0,1, 'Design'  )
+courses.splice(0,1, 'Design', 'New'  )
 
 
 /*** Array - Sorting ***/
@@ -90,6 +90,11 @@ for(const prop in ACstudents[0]){
 }
 
 //Use a for...of and a for...in to display all the properties of every student from the ACstudents array
+for(const item of ACstudents){
+    for(const prop in item){
+        console.log(prop, item[prop] )
+    }
+}
 
 
 
