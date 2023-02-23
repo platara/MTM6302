@@ -63,10 +63,25 @@ delete products[1].size
 //display all the products in the 'document'; you can use a bootstrap card, for...of loop, and innnerHTML. 
 
     //1.define varibles; 'DOM element' and a empty array
+    const items = []
+    const $list = document.getElementById('container')
 
     //2.define your 'html template'; push 'html code'(template) to the array.
 
+    for (const currtentProduct of products) {
+    items.push(`
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">${currtentProduct.product}</h5>
+            <p class="card-text">${currtentProduct.description}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    `)
+    }
+    
     //3.join and insert the complete 'html template'
+    $list.innerHTML = items.join('')
 
 
 
