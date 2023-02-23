@@ -102,3 +102,7 @@ delete products[1].size
 
     //2.repeat steps 2 and 3 from previous example
 
+
+
+   
+
