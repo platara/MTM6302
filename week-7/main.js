@@ -1,14 +1,31 @@
-//Create your HTML, Javascript file
+console.log("Js file")
+//Create your HTML
 //Install bootstrap
 //Ceate an array of objects(data structure) to manage store items; use two properties(product, price) in the object; create two products.
+const products = [
+    {
+        product: "Hoodie",
+        price: 60
+    },
+    {
+        product: "Tablet",
+        price: 1000
+    }
+]
 
 // print the first product in the console; retrieve the 'product' property.
+console.log( products[0].product )
 
-// add one extra item to the 'products' array
-
+// add one extra item to the 'products' array; use a method
+products.push(
+    {
+        product: "Laptop",
+        price: 2000
+    }
+)
 
 //update the price of the 'Hoodie' product to 50.00
-
+products[0].price = 50.00
 
 //add the property 'size'; use the 'Tablet' product
 
@@ -32,7 +49,7 @@
 
 //display all the products in the 'document'; you can use a bootstrap card, for...of loop, and innnerHTML. 
 
-    //1.Define varibles; 'DOM element' and a empty array
+    //1.define varibles; 'DOM element' and a empty array
 
     //2.define your 'html template'; push 'html code'(template) to the array.
 
