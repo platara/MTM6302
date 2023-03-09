@@ -1,4 +1,4 @@
-// 1.Create a button in the student card(html file), and retrive it(js file).
+// 1.Create a button in the student card(script file), and retrive it(js file).
 
 // 2.Add an event listener to the button. Show the detail info.
 
