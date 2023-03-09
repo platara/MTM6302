@@ -98,7 +98,7 @@ for(const student of students ){
                 <span id="userName">${student.userName}</span>
                 </p>
                 <p id="email">${student.email}</p>
-                <button id="studentDetailsBtn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">More</button>
+                <button id="studentDetailsBtn" type="button" class="btn btn-primary">Edith</button>
             </div>
             <div class="ac-card-footer">
                 <img class="ac-logo" src="https://imdac.github.io/images/codepen/AC_WORDMARK_1C_WHT.png">
