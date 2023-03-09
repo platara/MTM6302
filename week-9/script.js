@@ -93,7 +93,7 @@ for(const student of students ){
             <div class="ac-card-image d-flex justify-content-center align-items-center"><i class="bi bi-person-bounding-box display-1"></i></div>
             <div class="ac-card-info">
                 <p>
-                <strong id="name">${student.name}</strong><br>
+                <strong id="studentName">${student.name}</strong><br>
                 <span id="studentNumber">${student.studentNumber}</span>-
                 <span id="userName">${student.userName}</span>
                 </p>
