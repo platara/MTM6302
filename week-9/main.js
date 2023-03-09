@@ -1,6 +1,15 @@
 // 1.Create a button in the student card(script file), and retrive it(js file).
+const $studentDetailsBtn = document.getElementById('studentDetailsBtn')
 
 // 2.Add an event listener to the button. Show the detail info.
+$studentDetailsBtn.addEventListener(
+    'click',
+    function(){
+        
+    }
+)
+
+
 
 // 3.Insert a HTML form in the detail info.
 
