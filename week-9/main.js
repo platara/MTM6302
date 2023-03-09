@@ -64,6 +64,7 @@ $form.addEventListener('submit', function(event){
 
 // 5. Create a 'search' box. in the html file.
 
+
 // 6. Add an event listener to the 'Search' form. Use the 'submit' event. Display a filtered list based on the student name.
 
 // 7.Add an event listener to the 'Search' element. Use the 'input' event. Display a filtered list based on the student name.
