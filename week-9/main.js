@@ -1,6 +1,15 @@
-// 1.Create a button in the student card(script file), and retrive it(js file).
+// 1.Create a button in the student card(script file), and retrieve it(main js file).
+const $edithStudentBtn = document.getElementById('edithStudentBtn')
+console.log($edithStudentBtn)
 
-// 2.Add an event listener to the button. Show the detail info.
+// 2.Add an event listener to the button.
+$edithStudentBtn.addEventListener('mouseover', function () {
+    
+    //create bs custom attributes
+    $edithStudentBtn.setAttribute('data-bs-toggle', 'modal') // updates the attribute
+    $edithStudentBtn.setAttribute('data-bs-target', '#exampleModal') // updates the attribute
+
+  })
 
 // 3.Insert a HTML form in the detail info.
 
