@@ -93,16 +93,12 @@ for(const student of students ){
             <div class="ac-card-image d-flex justify-content-center align-items-center"><i class="bi bi-person-bounding-box display-1"></i></div>
             <div class="ac-card-info">
                 <p>
-                <strong id="name">${student.name}</strong><br>
+                <strong id="studentName">${student.name}</strong><br>
                 <span id="studentNumber">${student.studentNumber}</span>-
                 <span id="userName">${student.userName}</span>
                 </p>
                 <p id="email">${student.email}</p>
-
-                <!-- Button trigger modal -->
-                <button id="studentDetailsBtn" type="button" class="btn btn-primary" >
-                    More details
-                </button>
+                <button id="edithStudentBtn" class="btn btn-primary" type="button">Edith</button>
             </div>
             <div class="ac-card-footer">
                 <img class="ac-logo" src="https://imdac.github.io/images/codepen/AC_WORDMARK_1C_WHT.png">
