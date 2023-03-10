@@ -1,5 +1,5 @@
 // 1.Create a button in the student card(html file), and retrive it(js file).
-
+m
 // 2.Add an event listener to the button. Show the detail info.
 
 // 3.Insert a HTML form in the detail info.
