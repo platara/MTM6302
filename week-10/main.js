@@ -1,13 +1,13 @@
 // 1.Create a button in the student card(script file), and retrieve it(main js file).
-const $updateStudentBtn = document.getElementById('updateStudentBtn')
-console.log($updateStudentBtn)
+const $editStudentBtn = document.getElementById('editStudentBtn')
+console.log($editStudentBtn)
 
 // 2.Add an event listener to the button.
-$updateStudentBtn.addEventListener('mouseover', function () {
+$editStudentBtn.addEventListener('mouseover', function () {
     
     //create bs custom attributes
-    $updateStudentBtn.setAttribute('data-bs-toggle', 'modal') // updates the attribute
-    $updateStudentBtn.setAttribute('data-bs-target', '#exampleModal') // updates the attribute
+    $editStudentBtn.setAttribute('data-bs-toggle', 'modal') // updates the attribute
+    $editStudentBtn.setAttribute('data-bs-target', '#exampleModal') // updates the attribute
 
   })
 
@@ -67,34 +67,13 @@ $form.addEventListener('submit', function(event){
 
 // 6. Add an event listener to the 'Search' form. Use the 'submit' event. Display a filtered list based on the student name.
 
-// 7. Add an event listener to the 'Search' element. Use the 'input' event. Display a filtered list based on the student name.
+// 7.Add an event listener to the 'Search' element. Use the 'input' event. Display a filtered list based on the student name.
 
+// 8. Create a HTML attribute to send/display the 'student number' in the details view of the student (modal).
 
-// 8. Use the custom attributes to 
+// 9. Add an event listener in all the 'ac-card' buttons. 
 
-
-
-
-
-
-
-// const $buttons = document.querySelectorAll('.ac-card-info button')
-// // console.log($buttons)
-// for (const button of $buttons) {
-//   button.addEventListener('click', function(){ })
-// }
-
-
-// const $studentList = document.getElementById('studentList')
-
-// $studentList.addEventListener('click', function(e){
-//   if(e.target.classList.contains('btn')){
-//     //functionality
-//   }
-// })
-
-
-
+// 10 Use the event delegation to listen to the 'submit' event in the student details view (modal).
 
 
 
