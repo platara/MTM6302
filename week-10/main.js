@@ -80,8 +80,13 @@ console.log(  document.getElementById('studentNumber').dataset.studentNumber )
 
 
 // 9. Add an event listener in all the 'ac-card' buttons. 
+const $buttons = document.querySelectorAll(".ac-card-info button");
 
-
+for(const button of $buttons){
+  button.addEventListener('click', function() {
+      console.log('click')
+  })
+}
 
 // 10 Use the event delegation to listen to the 'submit' event in the student details view (modal).
 
