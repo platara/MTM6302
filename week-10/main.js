@@ -71,8 +71,32 @@ $form.addEventListener('submit', function(event){
 // 5. Create a 'search' box. in the html file.
 
 // 6. Add an event listener to the 'Search' form. Use the 'submit' event. Display a filtered list based on the student name.
+const $searchStudentForm = document.getElementById('searchStudent')
+$searchStudentForm.addEventListener('submit', function(e){
+  e.preventDefault()
+
+  const searchList = students.filter( student =>  student.name.includes($searchStudentForm.elements['query'].value)   )
+  createTable(searchList)
+
+
+  // console.log('Search')
+
+})
+
 
 // 7.Add an event listener to the 'Search' element. Use the 'input' event. Display a filtered list based on the student name.
+
+const $inputSearch = document.getElementById('inputSearch')
+
+$inputSearch.addEventListener('input', function(){
+  const searchList = students.filter( student =>  student.name.includes($inputSearch.value)   )
+  
+  createTable(searchList)
+})
+
+
+
+
 
 /*** Week 10 ***/
 // 8. Create a HTML attribute to send/display the 'student number' in the details view of the student (modal).
@@ -122,7 +146,7 @@ for(const button of $buttons){
 $modalBody.addEventListener('submit', function(event) {
   event.preventDefault()
 
-  console.log(event.target.dataset.index)
+  console.log(event)
   const index = event.target.dataset.index
 
   // update the object value
