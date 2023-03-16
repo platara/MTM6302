@@ -86,19 +86,20 @@ const $studentList = document.getElementById('studentList')
 //1.create an empty array
 const htmlTemplates = []
 for(const student of students ){
+    const studentIndex = student.studentNumber -1
     // 2.use the push method
     htmlTemplates.push(
-    `<div id="studentID" class="col-md-6">
+    `<div id="studentID${studentIndex}" class="col-md-6">
         <div class="ac-card">
             <div class="ac-card-image d-flex justify-content-center align-items-center"><i class="bi bi-person-bounding-box display-1"></i></div>
             <div class="ac-card-info">
                 <p>
-                <strong id="studentName">${student.name}</strong><br>
-                <span id="studentNumber" data-student-number="${student.studentNumber}">${student.studentNumber}</span>-
-                <span id="userName">${student.userName}</span>
+                <strong id="studentName${studentIndex}">${student.name}</strong><br>
+                <span id="studentNumber${studentIndex}" data-student-number="${student.studentNumber}">${student.studentNumber}</span>-
+                <span id="userName${studentIndex}">${student.userName}</span>
                 </p>
-                <p id="email">${student.email}</p>
-                <button id="editStudentBtn" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" >Edit</button>
+                <p id="email${studentIndex}">${student.email}</p>
+                <button id="editStudentBtn${studentIndex}" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-student-index="${studentIndex}" >Edit</button>
             </div>
             <div class="ac-card-footer">
                 <img class="ac-logo" src="https://imdac.github.io/images/codepen/AC_WORDMARK_1C_WHT.png">
