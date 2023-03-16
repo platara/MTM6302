@@ -2,14 +2,14 @@
 const $editStudentBtn = document.getElementById('editStudentBtn')
 console.log($editStudentBtn)
 
-// 2.Add an event listener to the button.
-$editStudentBtn.addEventListener('mouseover', function () {
+// // 2.Add an event listener to the button.
+// $editStudentBtn.addEventListener('mouseover', function () {
     
-    //create bs custom attributes
-    $editStudentBtn.setAttribute('data-bs-toggle', 'modal') // updates the attribute
-    $editStudentBtn.setAttribute('data-bs-target', '#exampleModal') // updates the attribute
+//     //create bs custom attributes
+//     $editStudentBtn.setAttribute('data-bs-toggle', 'modal') // updates the attribute
+//     $editStudentBtn.setAttribute('data-bs-target', '#exampleModal') // updates the attribute
 
-  })
+//   })
 
 // 3.Insert a 'HTML form' in the detail info.
 const $modalBody = document.getElementById('modal-body')
@@ -25,6 +25,12 @@ $modalBody.innerHTML = `
                   <label for="exampleInputPassword1" class="form-label">User name</label>
                   <input type="text" class="form-control" id="exampleInputPassword1" value="${students[0]['userName']}" name="userName">
                 </div>
+
+                <div class="mb-3">
+                  <label for="studentNumber" class="form-label">Student number</label>
+                  <input type="text" class="form-control" id="studentNumber" value="${document.getElementById('studentNumber').dataset.studentNumber}" name="userName">
+                </div>
+
                 <div class="mb-3 form-check">
                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
                   <label class="form-check-label" for="exampleCheck1">Check me out</label>
@@ -67,9 +73,11 @@ $form.addEventListener('submit', function(event){
 
 // 6. Add an event listener to the 'Search' form. Use the 'submit' event. Display a filtered list based on the student name.
 
-// 7.Add an event listener to the 'Search' element. Use the 'input' event. Display a filtered list based on the student name.
+// 7. Add an event listener to the 'Search' element. Use the 'input' event. Display a filtered list based on the student name.
 
 // 8. Create a HTML attribute to send/display the 'student number' in the details view of the student (modal).
+const $studentNumber = document.getElementById('studentNumber')
+console.log(  $studentNumber.dataset.studentNumber )
 
 // 9. Add an event listener in all the 'ac-card' buttons. 
 
