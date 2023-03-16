@@ -98,7 +98,7 @@ for(const student of students ){
                 <span id="userName">${student.userName}</span>
                 </p>
                 <p id="email">${student.email}</p>
-                <button id="editStudentBtn" class="btn btn-primary" type="button">Edit</button>
+                <button id="editStudentBtn" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
             </div>
             <div class="ac-card-footer">
                 <img class="ac-logo" src="https://imdac.github.io/images/codepen/AC_WORDMARK_1C_WHT.png">
@@ -107,8 +107,8 @@ for(const student of students ){
     </div>`)
 }
 //3.use the join and innerHTML method
-// $studentList.innerHTML = htmlTemplates.join('')
-$studentList.innerHTML = htmlTemplates[0]
+$studentList.innerHTML = htmlTemplates.join('')
+// $studentList.innerHTML = htmlTemplates[0]
 
 
 
