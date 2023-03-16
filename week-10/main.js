@@ -89,7 +89,7 @@ for(const button of $buttons){
       console.log(event.target.dataset.index)
       const index = event.target.dataset.index
       $modalBody.innerHTML = `
-            <form id="form">
+            <form id="form" data-index="${index}">
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Email address</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="${students[index].email}" name="email">
@@ -109,7 +109,7 @@ for(const button of $buttons){
                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
                   <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
               </form>
 `
 
@@ -118,6 +118,24 @@ for(const button of $buttons){
 }
 
 // 10 Use the event delegation to listen to the 'submit' event in the student details view (modal).
+
+$modalBody.addEventListener('submit', function(event) {
+  event.preventDefault()
+
+  console.log(event.target.dataset.index)
+  const index = event.target.dataset.index
+
+  // update the object value
+  students[index].userName = event.target.elements['userName'].value
+  students[index].email = event.target.elements['email'].value
+
+  //display the value in the DOM
+  document.getElementById('userName' + index).textContent = event.target.elements['userName'].value
+  document.getElementById('email' + index).textContent = event.target.elements['email'].value
+ 
+
+} )
+
 
 
 
