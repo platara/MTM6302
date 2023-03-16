@@ -79,6 +79,8 @@ $form.addEventListener('submit', function(event){
 const $studentNumber = document.getElementById('studentNumber')
 console.log(  $studentNumber.dataset.studentNumber )
 
+
+
 // 9. Add an event listener in all the 'ac-card' buttons. 
 
 // 10 Use the event delegation to listen to the 'submit' event in the student details view (modal).
