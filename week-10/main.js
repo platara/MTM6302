@@ -2,14 +2,14 @@
 const $editStudentBtn = document.getElementById('editStudentBtn')
 console.log($editStudentBtn)
 
-// // 2.Add an event listener to the button.
-// $editStudentBtn.addEventListener('mouseover', function () {
+// 2.Add an event listener to the button.
+$editStudentBtn.addEventListener('mouseover', function () {
     
-//     //create bs custom attributes
-//     $editStudentBtn.setAttribute('data-bs-toggle', 'modal') // updates the attribute
-//     $editStudentBtn.setAttribute('data-bs-target', '#exampleModal') // updates the attribute
+    //create bs custom attributes
+    $editStudentBtn.setAttribute('data-bs-toggle', 'modal') // updates the attribute
+    $editStudentBtn.setAttribute('data-bs-target', '#exampleModal') // updates the attribute
 
-//   })
+  })
 
 // 3.Insert a 'HTML form' in the detail info.
 const $modalBody = document.getElementById('modal-body')
@@ -25,12 +25,6 @@ $modalBody.innerHTML = `
                   <label for="exampleInputPassword1" class="form-label">User name</label>
                   <input type="text" class="form-control" id="exampleInputPassword1" value="${students[0]['userName']}" name="userName">
                 </div>
-
-                <div class="mb-3">
-                  <label for="studentNumber" class="form-label">Student number</label>
-                  <input type="text" class="form-control" id="studentNumber" value="${document.getElementById('studentNumber0').dataset.studentNumber}" name="userName">
-                </div>
-
                 <div class="mb-3 form-check">
                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
                   <label class="form-check-label" for="exampleCheck1">Check me out</label>
@@ -70,94 +64,16 @@ $form.addEventListener('submit', function(event){
 
 // 5. Create a 'search' box. in the html file.
 
-
 // 6. Add an event listener to the 'Search' form. Use the 'submit' event. Display a filtered list based on the student name.
-const $searchForm = document.getElementById('searchForm')
-$searchForm.addEventListener('submit', function(e) {
-    e.preventDefault()
-    // console.log($searchForm.elements['query'])
-    // const $searchForm = document.getElementById('searchForm')
-    const searchList = students.filter(student => student.name.includes($searchForm.elements['query'].value))
-    console.log(searchList)
-    createTable(searchList)
-})
 
+// 7.Add an event listener to the 'Search' element. Use the 'input' event. Display a filtered list based on the student name.
 
-// 7. Add an event listener to the 'Search' element. Use the 'input' event. Display a filtered list based on the student name.
-const $searchInput= document.getElementById('searchInput')
-$searchInput.addEventListener('input', function(){
-    const searchList = students.filter(student => student.name.includes($searchForm.elements['query'].value))
-    console.log('change')
-    createTable(searchList)
-});
-
+/*** Week 10 ***/
 // 8. Create a HTML attribute to send/display the 'student number' in the details view of the student (modal).
-const $studentNumber = document.getElementById('studentNumber')
-console.log(  $studentNumber.dataset.studentNumber )
-
-const $buttons = document.querySelectorAll('.ac-card-info button')
 
 // 9. Add an event listener in all the 'ac-card' buttons. 
-for (const button of $buttons) {
-  button.addEventListener('click', function(event){
-    console.log(event.target.dataset.studentIndex)
-    event.target
-    $modalBody.innerHTML = `
-            <form  data-student-index="${event.target.dataset.studentIndex}">
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="${students[event.target.dataset.studentIndex].email}" name="email">
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">User name</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" value="${students[event.target.dataset.studentIndex]['userName']}" name="userName">
-                </div>
-
-                <div class="mb-3">
-                  <label for="studentNumber" class="form-label">Student number</label>
-                  <input type="text" class="form-control" id="studentNumber" value="${students[event.target.dataset.studentIndex].studentNumber}" name="studentNumber">
-                </div>
-
-                <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
-              </form>
-`
-   })
-  }
-
-
 
 // 10 Use the event delegation to listen to the 'submit' event in the student details view (modal).
-$modalBody.addEventListener('submit', function(event){
-  event.preventDefault()
-  
-  console.log(event.target)
-  const form = event.target
-  const index = event.target.dataset.studentIndex
-
-  // update the object value
-  students[index].userName = form.elements['userName'].value
-  students[index].email = form.elements['email'].value
-
-  //display the value in the DOM
-
-  console.log(document.getElementById('userName' + index))
-  console.log(form.elements)
-
-  document.getElementById('userName' + index).textContent = form.elements['userName'].value
-  document.getElementById('email' + index).textContent = form.elements['email'].value
-
-})
-
-
-
-
-
-
 
 
 
