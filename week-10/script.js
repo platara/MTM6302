@@ -99,7 +99,7 @@ for(const student of students ){
                 <span id="userName${studentIndex}">${student.userName}</span>
                 </p>
                 <p id="email${studentIndex}">${student.email}</p>
-                <button id="editStudentBtn${studentIndex}" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                <button id="editStudentBtn${studentIndex}" data-index="${studentIndex}" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
             </div>
             <div class="ac-card-footer">
                 <img class="ac-logo" src="https://imdac.github.io/images/codepen/AC_WORDMARK_1C_WHT.png">

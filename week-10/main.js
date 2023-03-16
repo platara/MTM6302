@@ -28,7 +28,7 @@ $modalBody.innerHTML = `
 
                 <div class="mb-3">
                   <label for="studentNumber" class="form-label">Student number</label>
-                  <input type="text" class="form-control" id="studentNumber" value="${document.getElementById('studentNumber').dataset.studentNumber}" name="studentNumber">
+                  <input type="text" class="form-control" id="studentNumber" value="${document.getElementById('studentNumber1').dataset.studentNumber}" name="studentNumber">
                 </div>
 
                 <div class="mb-3 form-check">
@@ -83,8 +83,37 @@ console.log(  document.getElementById('studentNumber').dataset.studentNumber )
 const $buttons = document.querySelectorAll(".ac-card-info button");
 
 for(const button of $buttons){
-  button.addEventListener('click', function() {
-      console.log('click')
+  button.addEventListener('click', function(event) {
+
+      
+      console.log(event.target.dataset.index)
+      const index = event.target.dataset.index
+      $modalBody.innerHTML = `
+            <form id="form">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="${students[index].email}" name="email">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">User name</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" value="${students[index]['userName']}" name="userName">
+                </div>
+
+                <div class="mb-3">
+                  <label for="studentNumber" class="form-label">Student number</label>
+                  <input type="text" class="form-control" id="studentNumber" value="${students[index].studentNumber}" name="studentNumber">
+                </div>
+
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+`
+
+
   })
 }
 
