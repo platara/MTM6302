@@ -28,7 +28,7 @@ $modalBody.innerHTML = `
 
                 <div class="mb-3">
                   <label for="studentNumber" class="form-label">Student number</label>
-                  <input type="text" class="form-control" id="studentNumber" value="${document.getElementById('studentNumber').dataset.studentNumber}" name="userName">
+                  <input type="text" class="form-control" id="studentNumber" value="${document.getElementById('studentNumber0').dataset.studentNumber}" name="userName">
                 </div>
 
                 <div class="mb-3 form-check">
@@ -79,7 +79,13 @@ $form.addEventListener('submit', function(event){
 const $studentNumber = document.getElementById('studentNumber')
 console.log(  $studentNumber.dataset.studentNumber )
 
+const $buttons = document.querySelectorAll('.ac-card-info button')
 
+for (const button of $buttons) {
+  button.addEventListener('click', function(){
+    console.log('click')
+   })
+  }
 
 // 9. Add an event listener in all the 'ac-card' buttons. 
 
