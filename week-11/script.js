@@ -1,11 +1,6 @@
 const courses = ['Design','WDIII','Web production']
 
-let students = []
-
-if(localStorage.getItem('studentsLS') ){
-    students = JSON.parse(localStorage.getItem('studentsLS'))
-}else {
-    students = [
+const students = [
         {
             "studentNumber":1,
             "name":"Leanne Graham",
@@ -67,8 +62,6 @@ if(localStorage.getItem('studentsLS') ){
             "email":"Rey.Padberg@karina.biz"   
         }
     ]
-}
-
     
 
 /*** Inserting elements with insertAdjacentHTML */
