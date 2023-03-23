@@ -157,6 +157,8 @@ $modalBody.addEventListener('submit', function(event) {
   document.getElementById('userName' + index).textContent = event.target.elements['userName'].value
   document.getElementById('email' + index).textContent = event.target.elements['email'].value
  
+  //saved to local storage
+  localStorage.setItem('studentsLS', JSON.stringify(students))
 
 } )
 
