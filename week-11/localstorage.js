@@ -6,6 +6,9 @@ const $switchTheme =  document.getElementById('flexSwitchCheckDefault')
 // 3. Add an event Listener to the switch; If the user changes its value, change the color theme of the page.
 $switchTheme.addEventListener('change', function() {
     console.log( $switchTheme.checked )
+    
+
+
 })
 
 /*** Local Storage - dark mode  ***/
