@@ -1,8 +1,12 @@
-// 1. Create the html element to switch between dark and light theme
+// 1. Create the html element to switch between dark and light theme -ok
 
 // 2. Retrieve the value of the switch element
+const $switchTheme =  document.getElementById('flexSwitchCheckDefault')
 
 // 3. Add an event Listener to the switch; If the user changes its value, change the color theme of the page.
+$switchTheme.addEventListener('change', function() {
+    console.log( $switchTheme.checked )
+})
 
 /*** Local Storage - dark mode  ***/
 // 4. Save the color theme in the 'Local Storage'; This should happen every time the user sets the color theme.
