@@ -8,9 +8,9 @@ const $users = document.getElementById('user-list')
 //       })
 
 async function fetchData () {
-    const response = await fetch('https://jsonplaceholder.typicode.com/users')
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon/?offset=2&limit=5')
     const json = await response.json()
-    displayUsers(json)
+    displayUsers(json.results)
   }
  
 fetchData ()
@@ -21,7 +21,7 @@ fetchData ()
 function displayUsers(users){
     const htmlTemplate = []
         for(const user of users ){
-            htmlTemplate.push(`<li>${user.email}</li>`)
+            htmlTemplate.push(`<li>${user.name}</li>`)
         }
         $users.innerHTML = htmlTemplate.join('')
 }
